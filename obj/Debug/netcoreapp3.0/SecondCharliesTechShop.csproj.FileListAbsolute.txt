@@ -16,3 +16,14 @@ D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\Secon
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.RazorTargetAssemblyInfo.cache
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.dll
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.pdb
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\bin\Debug\netcoreapp3.0\SecondCharliesTechShop.Views.dll
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\bin\Debug\netcoreapp3.0\SecondCharliesTechShop.Views.pdb
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.RazorAssemblyInfo.cache
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.RazorAssemblyInfo.cs
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.TagHelpers.input.cache
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.TagHelpers.output.cache
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.RazorCoreGenerate.cache
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Tech\List.cshtml.g.cs
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.RazorTargetAssemblyInfo.cs
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.Views.pdb
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.csproj.CopyComplete

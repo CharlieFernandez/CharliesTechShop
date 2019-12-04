@@ -1,0 +1,12 @@
+﻿@model SecondCharliesTechShop.ViewModels.TechListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+
+@foreach (var tech in Model.Tech)
+{
+	<div>
+		<h2>@tech.Name</h2>
+		<h3>@tech.Price</h3>
+		<h4>@tech.Category.CategoryName</h4>
+	</div>
+}

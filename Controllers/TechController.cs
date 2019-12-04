@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SecondCharliesTechShop.Models;
+using SecondCharliesTechShop.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,7 +23,12 @@ namespace SecondCharliesTechShop.Controllers
 
         public ViewResult List()
         {
-            return View(_techRepository.AllTech);
+            TechListViewModel techListViewModel = new TechListViewModel();
+
+            techListViewModel.Tech = _techRepository.AllTech;
+            techListViewModel.CurrentCategory = "Special Tech!";
+
+            return View(techListViewModel);
         }
     }
 }
