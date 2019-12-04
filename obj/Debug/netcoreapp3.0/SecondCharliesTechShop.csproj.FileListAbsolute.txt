@@ -29,3 +29,5 @@ D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\Secon
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.csproj.CopyComplete
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\bin\Debug\netcoreapp3.0\libman.json
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
