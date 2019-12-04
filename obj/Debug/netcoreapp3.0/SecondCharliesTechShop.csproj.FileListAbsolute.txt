@@ -27,3 +27,5 @@ D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\Secon
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.RazorTargetAssemblyInfo.cs
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.Views.pdb
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.csproj.CopyComplete
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
