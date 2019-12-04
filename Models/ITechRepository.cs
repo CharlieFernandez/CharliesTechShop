@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SecondCharliesTechShop.Models
 {
-    interface ITechRepository
+    public interface ITechRepository
     {
         IEnumerable<Tech> AllTech { get; }
         IEnumerable<Tech> MostPopularTech { get; }
