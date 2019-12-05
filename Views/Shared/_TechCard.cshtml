@@ -9,5 +9,14 @@
 				<a asp-controller="Tech" asp-action="Details" asp-route-id="@Model.TechId">@Model.Name</a>
 			</h3>
 		</div>
+		<div class="addToCart">
+			<p class="button">
+				<a class="btn btn-primary"
+					asp-controller="ShoppingCart" 
+					asp-action="AddToShoppingCart" 
+					asp-route-techId="@Model.TechId">Add to cart
+				</a>
+			</p>
+		</div>
 	</div>
 </div>
