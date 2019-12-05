@@ -30,5 +30,15 @@ namespace SecondCharliesTechShop.Controllers
 
             return View(techListViewModel);
         }
+
+        public IActionResult Details(int id)
+        {
+            var tech = _techRepository.GetTechById(id);
+
+            if (tech == null)
+                return NotFound();
+
+            return View(tech);
+        }
     }
 }
