@@ -4,15 +4,5 @@
 
 @foreach (var tech in Model.Tech)
 {
-	<div class="col-sm-4 col-lg-4 col-md-4">
-		<div class="thumbnail">
-			<img src="@tech.ImageUrl" alt="@tech.Name" />
-			<div class="caption">
-				<h3 class="pull-right">@tech.Price.ToString("c")</h3>
-				<h3>
-					<a asp-controller="Tech" asp-action="Details" asp-route-id="@tech.TechId">@tech.Name</a>
-				</h3>
-			</div>
-		</div>
-	</div>
+	<partial name="_TechCard" model="@tech" />
 }
