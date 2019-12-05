@@ -27,7 +27,7 @@ using SecondCharliesTechShop.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"981803a261c8a7e78338e1587b319d665b22cb09", @"/Views/Shared/_TechCard.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"95fd09e4e1f0a778fca2617d25e336493c5608d3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"32c210662aabfb0c6a147d62ef69dd3386f4ba7c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__TechCard : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Tech>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Tech", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

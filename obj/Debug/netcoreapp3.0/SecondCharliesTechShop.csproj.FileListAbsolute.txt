@@ -73,3 +73,4 @@ D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\Secon
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\ShoppingCart\Index.cshtml.g.cs
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\ShoppingCartSummary\Default.cshtml.g.cs
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\CategoryMenu\Default.cshtml.g.cs
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Contact\Index.cshtml.g.cs

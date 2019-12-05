@@ -27,7 +27,7 @@ using SecondCharliesTechShop.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"33de6898b64c5c2a76f9e0b8cccba1453d21ead6", @"/Views/Shared/Components/ShoppingCartSummary/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"95fd09e4e1f0a778fca2617d25e336493c5608d3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"32c210662aabfb0c6a147d62ef69dd3386f4ba7c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_ShoppingCartSummary_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ShoppingCartViewModel>
     {
         #pragma warning disable 1998
