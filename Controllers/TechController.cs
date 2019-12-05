@@ -21,14 +21,27 @@ namespace SecondCharliesTechShop.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        public ViewResult List()
+        public ViewResult List(string category)
         {
-            TechListViewModel techListViewModel = new TechListViewModel();
+            IEnumerable<Tech> tech;
+            string currentCategory;
 
-            techListViewModel.Tech = _techRepository.AllTech;
-            techListViewModel.CurrentCategory = "Special Tech!";
+            if(string.IsNullOrEmpty(category))
+            {
+                tech = _techRepository.AllTech.OrderBy(t => t.TechId);
+                currentCategory = "All tech";
+            }
+            else
+            {
+                tech = _techRepository.AllTech.Where(c => c.Category.CategoryName == category).OrderBy(t => t.TechId);
+                currentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.CategoryName == category).CategoryName;
+            }
 
-            return View(techListViewModel);
+            return View(new TechListViewModel
+            {
+                Tech = tech,
+                CurrentCategory = currentCategory
+            });
         }
 
         public IActionResult Details(int id)
