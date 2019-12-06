@@ -29,6 +29,7 @@ namespace SecondCharliesTechShop
             services.AddControllersWithViews();
             services.AddScoped<ITechRepository, TechRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

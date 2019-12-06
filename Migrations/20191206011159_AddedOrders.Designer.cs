@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SecondCharliesTechShop.Models;
 
 namespace SecondCharliesTechShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191206011159_AddedOrders")]
+    partial class AddedOrders
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -115,10 +117,13 @@ namespace SecondCharliesTechShop.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
+                    b.Property<int>("PieId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("TechId")
+                    b.Property<int?>("TechId")
                         .HasColumnType("int");
 
                     b.HasKey("OrderDetailId");
@@ -237,9 +242,7 @@ namespace SecondCharliesTechShop.Migrations
 
                     b.HasOne("SecondCharliesTechShop.Models.Tech", "Tech")
                         .WithMany()
-                        .HasForeignKey("TechId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TechId");
                 });
 
             modelBuilder.Entity("SecondCharliesTechShop.Models.ShoppingCartItem", b =>
