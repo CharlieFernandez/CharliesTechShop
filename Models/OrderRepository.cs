@@ -20,22 +20,25 @@ namespace SecondCharliesTechShop.Models
         {
             order.OrderPlaced = DateTime.Now;
 
-            _appDbContext.Orders.Add(order);
-
             var shoppingCartItems = _shoppingCart.ShoppingCartItems;
+            order.OrderTotal = _shoppingCart.GetShoppingCartTotal();
 
-            foreach(var item in shoppingCartItems)
+            order.OrderDetails = new List<OrderDetail>();
+            //adding the order with its details
+
+            foreach (var shoppingCartItem in shoppingCartItems)
             {
-                var orderDetail = new OrderDetail()
+                var orderDetail = new OrderDetail
                 {
-                    Amount = item.Amount,
-                    TechId = item.Tech.TechId,
-                    OrderId = order.OrderId,
-                    Price = item.Tech.Price
+                    Amount = shoppingCartItem.Amount,
+                    TechId = shoppingCartItem.Tech.TechId,
+                    Price = shoppingCartItem.Tech.Price
                 };
 
-                _appDbContext.OrderDetails.Add(orderDetail);
+                order.OrderDetails.Add(orderDetail);
             }
+
+            _appDbContext.Orders.Add(order);
 
             _appDbContext.SaveChanges();
         }

@@ -10,8 +10,8 @@ using SecondCharliesTechShop.Models;
 namespace SecondCharliesTechShop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20191206011159_AddedOrders")]
-    partial class AddedOrders
+    [Migration("20191206185446_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -117,13 +117,10 @@ namespace SecondCharliesTechShop.Migrations
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PieId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("TechId")
+                    b.Property<int>("TechId")
                         .HasColumnType("int");
 
                     b.HasKey("OrderDetailId");
@@ -242,7 +239,9 @@ namespace SecondCharliesTechShop.Migrations
 
                     b.HasOne("SecondCharliesTechShop.Models.Tech", "Tech")
                         .WithMany()
-                        .HasForeignKey("TechId");
+                        .HasForeignKey("TechId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SecondCharliesTechShop.Models.ShoppingCartItem", b =>
