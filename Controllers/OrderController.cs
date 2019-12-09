@@ -29,7 +29,6 @@ namespace SecondCharliesTechShop.Controllers
 
         [Authorize]
         [HttpPost]
-        [Authorize(Policy = "MinimumOrderAge")]
         public IActionResult Checkout(Order order)
         {
             var items = _shoppingCart.GetShoppingCartItems();
