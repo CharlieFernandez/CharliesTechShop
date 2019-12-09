@@ -1,9 +1,9 @@
 ﻿
-@model LoginViewModel
+@model RegisterUserViewModel
 
-<h2>Register now at Bethany's Pie Shop. It's free!</h2>
+<h2>Register now at Charlie's Tech Shop. It's free!</h2>
 <form asp-controller="Account" asp-action="Register" method="post" class="form-horizontal" role="form">
-	<h4>Create a new account and order your first pie today!</h4>
+	<h4>Create a new account and order some tech today!</h4>
 	<hr />
 	<div asp-validation-summary="All" class="text-danger"></div>
 	<div class="form-group">
@@ -13,6 +13,15 @@
 			<span asp-validation-for="UserName" class="text-danger"></span>
 		</div>
 	</div>
+
+	<div class="form-group">
+		<label asp-for="Email" class="col-md-2 control-label"></label>
+		<div class="col-md-10">
+			<input asp-for="Email" class="form-control" />
+			<span asp-validation-for="Email" class="text-danger"></span>
+		</div>
+	</div>
+
 	<div class="form-group">
 		<label asp-for="Password" class="col-md-2 control-label"></label>
 		<div class="col-md-10">
@@ -20,6 +29,8 @@
 			<span asp-validation-for="Password" class="text-danger"></span>
 		</div>
 	</div>
+
+
 	<div class="form-group">
 		<div class="col-md-offset-2 col-md-10">
 			<input type="submit" class="btn btn-primary" value="Register" />

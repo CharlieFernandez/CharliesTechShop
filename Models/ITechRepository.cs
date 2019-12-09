@@ -10,5 +10,7 @@ namespace SecondCharliesTechShop.Models
         IEnumerable<Tech> AllTech { get; }
         IEnumerable<Tech> MostPopularTech { get; }
         Tech GetTechById(int techId);
+        void UpdateTech(Tech tech);
+        void CreateTech(Tech tech);
     }
 }

@@ -32,20 +32,21 @@ namespace SecondCharliesTechShop.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(LoginViewModel loginViewModel)
+        public async Task<IActionResult> Register(RegisterUserViewModel registerUserViewModel)
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser() { UserName = loginViewModel.UserName };
-                var result = await _userManager.CreateAsync(user, loginViewModel.Password);
+                var user = new ApplicationUser() { UserName = registerUserViewModel.UserName, Email = registerUserViewModel.Email };
+                var result = await _userManager.CreateAsync(user, registerUserViewModel.Password);
 
                 if (result.Succeeded)
-                {
                     return RedirectToAction("Index", "Home");
-                }
+
+                UpdateModelStateErrors(result);
             }
-            return View(loginViewModel);
+            return View(registerUserViewModel);
         }
 
         [AllowAnonymous]
@@ -87,6 +88,14 @@ namespace SecondCharliesTechShop.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        protected void UpdateModelStateErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", "Username/password not found");
+            }
         }
     }
 }

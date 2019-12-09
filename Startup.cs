@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -47,6 +48,18 @@ namespace SecondCharliesTechShop
                 options.Password.RequireUppercase = true;
                 options.User.RequireUniqueEmail = true;
             }).AddEntityFrameworkStores<AppDbContext>();
+
+            //services.AddScoped<IAuthorizationHandler, MinimumOrderAgeAppUserRequirementHandler>();
+            //services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, AppClaimsPrincipalFactory>();
+
+            //Claims-based
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdministratorOnly", policy => policy.RequireRole("Administrator"));
+                options.AddPolicy("DeleteTech", policy => policy.RequireClaim("Delete Tech", "Delete Tech"));
+                options.AddPolicy("AddTech", policy => policy.RequireClaim("Add Tech", "Add Tech"));
+                options.AddPolicy("MinimumOrderAge", policy => policy.Requirements.Add(new MinimumOrderAgeRequirement(18)));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

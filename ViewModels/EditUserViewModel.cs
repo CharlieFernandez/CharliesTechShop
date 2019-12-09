@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace SecondCharliesTechShop.ViewModels
@@ -15,7 +16,7 @@ namespace SecondCharliesTechShop.ViewModels
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Please enter the user email")]
-        public string Email { get; set; }
+        public string Email { get; set; }        
 
         [Required(ErrorMessage = "Please enter the birth date")]
         [Display(Name = "Birth date")]
@@ -26,5 +27,7 @@ namespace SecondCharliesTechShop.ViewModels
         public string City { get; set; }
 
         public string Country { get; set; }
+
+        public List<Claim> UserClaims { get; set; }
     }
 }

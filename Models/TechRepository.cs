@@ -35,5 +35,17 @@ namespace SecondCharliesTechShop.Models
         {
             return _appDbContext.Tech.FirstOrDefault(t => t.TechId == techId);
         }
+
+        public void UpdateTech(Tech tech)
+        {
+            _appDbContext.Tech.Update(tech);
+            _appDbContext.SaveChanges();
+        }
+
+        public void CreateTech(Tech tech)
+        {
+            _appDbContext.Tech.Add(tech);
+            _appDbContext.SaveChanges();
+        }
     }
 }

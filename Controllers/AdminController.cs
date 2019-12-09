@@ -12,7 +12,7 @@ using SecondCharliesTechShop.ViewModels;
 
 namespace SecondCharliesTechShop.Controllers
 {
-    [Authorize(Roles = "Administrators")]
+    [Authorize(Roles = "Administrator")]
     public class AdminController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -77,15 +77,26 @@ namespace SecondCharliesTechShop.Controllers
             if (user == null)
                 return RedirectToAction("UserManagement", _userManager.Users);
 
-            var vm = new EditUserViewModel() { Id = user.Id, Email = user.Email, UserName = user.UserName, Birthdate = user.BirthDate, City = user.City, Country = user.Country };
+            var claims = await _userManager.GetClaimsAsync(user);
 
-            return View(vm);
 
+            return View(new EditUserViewModel()
+            {
+                Id = user.Id,
+                Email = user.Email,
+                UserName = user.UserName,
+                Birthdate = user.BirthDate,
+                City = user.City,
+                Country = user.Country,
+                UserClaims = claims.ToList()
+            });
         }
 
         [HttpPost]
         public async Task<IActionResult> EditUser(EditUserViewModel editUserViewModel)
         {
+            if (!ModelState.IsValid) return View(editUserViewModel);
+
             var user = await _userManager.FindByIdAsync(editUserViewModel.Id);
 
             if (user != null)
@@ -97,11 +108,11 @@ namespace SecondCharliesTechShop.Controllers
                 user.Country = editUserViewModel.Country;
 
                 var result = await _userManager.UpdateAsync(user);
-
                 if (result.Succeeded)
                     return RedirectToAction("UserManagement", _userManager.Users);
 
-                ModelState.AddModelError("", "User not updated, something went wrong.");
+
+                UpdateModelStateErrors(result);
 
                 return View(editUserViewModel);
             }
@@ -310,6 +321,50 @@ namespace SecondCharliesTechShop.Controllers
             }
 
             return View(userRoleViewModel);
+        }
+
+        //Claims
+        public async Task<IActionResult> ManageClaimsForUser(string userId)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+                return RedirectToAction("UserManagement", _userManager.Users);
+
+            var claimsManagementViewModel = new ClaimsManagementViewModel { UserId = user.Id, AllClaimsList = CharliesTechShopClaimTypes.ClaimsList };
+
+            return View(claimsManagementViewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ManageClaimsForUser(ClaimsManagementViewModel claimsManagementViewModel)
+        {
+            var user = await _userManager.FindByIdAsync(claimsManagementViewModel.UserId);
+
+            if (user == null)
+                return RedirectToAction("UserManagement", _userManager.Users);
+
+            IdentityUserClaim<string> claim =
+                new IdentityUserClaim<string> { ClaimType = claimsManagementViewModel.ClaimId, ClaimValue = claimsManagementViewModel.ClaimId };
+
+            user.Claims.Add(claim);
+
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+                return RedirectToAction("UserManagement", _userManager.Users);
+
+            ModelState.AddModelError("", "User not updated, something went wrong.");
+
+            return View(claimsManagementViewModel);
+        }
+
+        protected void UpdateModelStateErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
         }
     }
 }

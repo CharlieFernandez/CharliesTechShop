@@ -27,7 +27,9 @@ namespace SecondCharliesTechShop.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
+        [Authorize(Policy = "MinimumOrderAge")]
         public IActionResult Checkout(Order order)
         {
             var items = _shoppingCart.GetShoppingCartItems();
