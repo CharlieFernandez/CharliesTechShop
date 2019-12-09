@@ -14,12 +14,12 @@ namespace SecondCharliesTechShop.Controllers
 {
     [Authorize(Roles = "Administrator")]
     [Authorize(Policy = "DeleteTech")]
-    public class PieManagementController : Controller
+    public class TechManagementController : Controller
     {
         private readonly ITechRepository _techRepository;
         private readonly ICategoryRepository _categoryRepository;
 
-        public PieManagementController(ITechRepository techRepository, ICategoryRepository categoryRepository)
+        public TechManagementController(ITechRepository techRepository, ICategoryRepository categoryRepository)
         {
             _techRepository = techRepository;
             _categoryRepository = categoryRepository;
