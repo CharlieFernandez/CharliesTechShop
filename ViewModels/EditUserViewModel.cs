@@ -11,8 +11,8 @@ namespace SecondCharliesTechShop.ViewModels
     {
         public string Id { get; set; }
 
-        [Required(ErrorMessage = "Please enter the user name")]
-        [Display(Name = "User name")]
+        [Required(ErrorMessage = "Please enter the username")]
+        [Display(Name = "Username")]
         public string UserName { get; set; }
 
         [Required(ErrorMessage = "Please enter the user email")]

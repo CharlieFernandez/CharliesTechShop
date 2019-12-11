@@ -74,7 +74,7 @@ namespace SecondCharliesTechShop.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditPie(TechEditViewModel techEditViewModel)
+        public IActionResult EditTech(TechEditViewModel techEditViewModel)
         {
             techEditViewModel.Tech.CategoryId = techEditViewModel.CategoryId;
 
@@ -87,7 +87,7 @@ namespace SecondCharliesTechShop.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeletePie(string techId)
+        public IActionResult DeleteTech(string techId)
         {
             return View();
         }

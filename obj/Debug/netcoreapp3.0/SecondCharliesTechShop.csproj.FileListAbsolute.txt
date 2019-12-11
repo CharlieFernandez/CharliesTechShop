@@ -171,5 +171,6 @@ D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\Secon
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Account\Register.cshtml.g.cs
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Components\AdminMenu\Default.cshtml.g.cs
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\Razor\Views\Admin\ManageClaimsForUser.cshtml.g.cs
+D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\bin\Debug\netcoreapp3.0\CreditCardValidator.dll
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.MvcApplicationPartsAssemblyInfo.cs
 D:\Documents (Check this later)\Coding\Repositories\SecondCharliesTechShop\SecondCharliesTechShop\obj\Debug\netcoreapp3.0\SecondCharliesTechShop.MvcApplicationPartsAssemblyInfo.cache

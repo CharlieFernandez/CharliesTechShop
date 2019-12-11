@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.0": {
+      "CreditCardValidator/1.4.6": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/CreditCardValidator.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/CreditCardValidator.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.0": {
         "type": "package",
         "compile": {
@@ -2648,6 +2657,27 @@
     }
   },
   "libraries": {
+    "CreditCardValidator/1.4.6": {
+      "sha512": "dRgdRxeJZhnRYBHoYCaqvrPzUbBJQmO4sBBFRZ2xgr9Vemt4mu4ZWGtYvxN4wqZL7GLozR7KaDQJHRvMxSJGVg==",
+      "type": "package",
+      "path": "creditcardvalidator/1.4.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "creditcardvalidator.1.4.6.nupkg.sha512",
+        "creditcardvalidator.nuspec",
+        "lib/net35/CreditCardValidator.dll",
+        "lib/net40/CreditCardValidator.dll",
+        "lib/net45/CreditCardValidator.dll",
+        "lib/net46/CreditCardValidator.dll",
+        "lib/net471/CreditCardValidator.dll",
+        "lib/netcoreapp1.0/CreditCardValidator.dll",
+        "lib/netcoreapp1.1/CreditCardValidator.dll",
+        "lib/netcoreapp2.0/CreditCardValidator.dll",
+        "lib/netstandard2.0/CreditCardValidator.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8/CreditCardValidator.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.0": {
       "sha512": "bsnhHHiWb0s8fcLDOfTXAb0VoTT1cCRjvxo6kwi7RItOQxv/PjMx5s6BEhnAcm/+ZkrN4+2TFXhCZDuiPBfB0Q==",
       "type": "package",
@@ -8541,6 +8571,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
+      "CreditCardValidator >= 1.4.6",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.0",
       "Microsoft.AspNetCore.Identity.UI >= 3.0.0-preview8.19405.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.0",
@@ -8586,6 +8617,10 @@
     "frameworks": {
       "netcoreapp3.0": {
         "dependencies": {
+          "CreditCardValidator": {
+            "target": "Package",
+            "version": "[1.4.6, )"
+          },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.0, )"

@@ -44,7 +44,7 @@ namespace SecondCharliesTechShop.Controllers
                 if (result.Succeeded)
                     return RedirectToAction("Index", "Home");
 
-                UpdateModelStateErrors(result);
+                UpdateModelStateErrors(result, "Credentials didn't follow the guidelines incorrectly");
             }
             return View(registerUserViewModel);
         }
@@ -90,11 +90,11 @@ namespace SecondCharliesTechShop.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        protected void UpdateModelStateErrors(IdentityResult result)
+        protected void UpdateModelStateErrors(IdentityResult result, string message)
         {
             foreach (var error in result.Errors)
             {
-                ModelState.AddModelError("", "Username/password not found");
+                ModelState.AddModelError("", message);
             }
         }
     }

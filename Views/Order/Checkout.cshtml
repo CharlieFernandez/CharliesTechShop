@@ -86,8 +86,17 @@
 		</div>
 
 		<div class="form-group">
+			<label asp-for="CCNumber" class="col-md-2 control-label"></label>
+			<div class="col-md-5">
+				<input asp-for="CCNumber" class="form-control" />
+				<span asp-validation-for="CCNumber" class="text-danger"></span>
+			</div>
+		</div>
+
+		<div class="form-group">
 			<div class="col-md-offset-2 col-md-5">
 				<input type="submit" class="btn btn-primary" value="Complete order" />
 			</div>
 		</div>
+
 	</form>
